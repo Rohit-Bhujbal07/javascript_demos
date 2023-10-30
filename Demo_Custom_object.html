@@ -1,0 +1,76 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+            //Pattern of creating objects
+
+            //factory Method
+            
+      /*  function createPerson(name,age,job){
+            var o = new Object();
+            o.name=name;
+            o.age=age;
+            o.job=job;
+
+            o.sayName=function(){
+                alert(name);
+            }
+            return o;
+        }
+        var person1=createPerson("AAA",22,"developer");
+        var person2=createPerson("BBB",23,"admin");
+        person1.sayName();
+        alert(person1 instanceof createPerson);//false
+
+        // it pretenss to be an object of createPerson
+
+    */
+       
+         // Constructor Pattern
+
+       /*  function Person(name,age,job){
+            this.name=name;
+            this.age=age;
+            this.job=job;
+            this.sayName=function(){
+                alert(this.name);
+            }
+         }
+         var p1=new Person("AAA",22,"developer");//AAA
+         p1.sayName();
+         var p2=new Person("BBB",23,"tester");//BBB
+         p2.sayName();
+         alert(p1 instanceof Person);//true - every object have its own copy of attributes
+         alert(p1.sayName===p2.sayName);//false - methods are not shared
+
+     */
+
+     // combination of constructor and protype pattern
+     function Person(name,age,job){
+            this.name=name;
+            this.age=age;
+            this.job=job;
+            this.arr=["A","B"];
+     }
+
+            Person.prototype={
+                constructor:Person,
+                sayName:function(){
+                    alert(this.name);
+                }
+            }
+            var p1=new Person("AAA",22,"developer");
+            p1.arr.push("test");
+            alert(p1.arr);
+            p1.sayName();
+
+            var p2=new Person("BBB",23,"Tester");
+            alert(p2.arr);
+            alert(p1.sayName===p2.sayName);//true
+            
+    
+        </script>
+    </body>
+</html>

@@ -1,0 +1,64 @@
+<html>
+    <head>
+
+    </head>
+    <table border="2" contenteditable="true">
+        <tr>
+            <td>RollNo</td>
+            <td>Name</td>
+            <td>Marks</td>
+        </tr>
+        <tr>
+        <td>1</td>
+        <td>AAA</td>
+        <td>10</td>
+        </tr>
+
+        <tr>
+            <td>2</td>
+            <td>BBB</td>
+            <td>20</td>
+        </tr>
+    </table>
+    <input type="button" value="Add Now" id="btnAdd">
+    <div id="d1"></div>
+    <script>
+        var tbl1=document.querySelector("table");
+        tbl1.addEventListener("click",funClick,false);
+
+        var btnAdd=document.querySelector("#btnAdd");
+        btnAdd.addEventListener("click",funAdd,false);
+
+
+        var d1=document.getElementById("d1");
+        function funClick(event){
+            var tr=event.target.parentNode;
+
+            var arr=tr.getElementsByTagName("td");
+            d1.innerHTML="<br>RollNo="+arr[0].textContent+"<br>Name="+arr[1].textContent+"<br>Marks="+arr[2].textContent;
+        }
+
+        function funAdd(){
+            var trNew=document.createElement("tr");
+            
+            var td1=document.createElement("td");
+            var td2=document.createElement("td");
+            var td3=document.createElement("td");
+
+            var txt1=document.createTextNode("test");
+            var txt2=document.createTextNode("test");
+            var txt3=document.createTextNode("test");
+
+            td1.appendChild(txt1);
+            td2.appendChild(txt2);
+            td3.appendChild(txt3);
+
+            trNew.appendChild(td1);
+            trNew.appendChild(td2);
+            trNew.appendChild(td3);
+
+            tbl1.appendChild(trNew);
+        }
+
+    </script>
+</html>

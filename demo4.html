@@ -1,0 +1,26 @@
+<html>
+    <head>
+    </head>
+    <body>
+        <div id="d1">This is div</div>
+        <input type="text" id="txtName"><br>
+        <input type="button" value="Click" onclick="fun()">
+        <p id="p1"></p>
+        <script>
+            var d1=document.getElementById("d1");
+            var x=document.getElementById("p1");
+            function fun(){
+                console.log(d1.ineerHTML);
+                //alert(d1.innerHTML);
+                //document.write(d1.innerHTML+"Hello");
+                //p1.innerHTML="<b>"+d1.innerHTML+"</b>";
+                p1.textContent="<b>"+d1.innerHTML+"</b>";
+                var txtName=document.getElementById("txtName").value;
+                d1.innerHTML="<br><b><i> from textbox:"+txtName+"</b></i>";
+                d1.style.backgroundColor=txtName;
+                document.bgColor="lightyellow";
+                        
+            }
+        </script>
+    </body>
+</html>

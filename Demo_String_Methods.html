@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <body>
+          <div is="d1"></div>
+        </body>
+        <script>
+             var str2="hello";
+             var str1=new String("hello");
+             console.log(typeof(str2));
+             console.log(typeof(str1)); 
+             console.log(str2==str1);
+             console.log(str2===str1);
+             
+             var str="Hello!This is javascript.";
+             document.write("<br>length="+str.length);
+             document.write("<br>str[0]="+str[0]);
+             document.write("<br>charAt()="+str.charAt(3));
+             document.write("<br>indexOf()="+str.indexOf("This"));
+             document.write("<br>slice="+str.slice(1));
+             document.write("<br>slice="+str.slice(1,7));
+             document.write("<br>substr="+str.substr(1));
+             document.write("<br>substr="+str.substr(1,7));
+             document.write("<br>substring="+str.substring(1));
+             document.write("<br>substring="+str.substring(1,7));
+             document.write("<br>toLowercase()="+str.toLowerCase());
+             document.write("<br>toUppercase()="+str.toUpperCase());
+             document.write("<br>charCodeAt()="+str.charCodeAt("A"));
+        
+             console.log(" hello ".length);
+             document.write("<br>trim()="+" hello ".trim().length);
+             document.write("<br>search()="+str.search("is"));
+             document.write("<br>repeat()="+str.repeat(2));
+             document.write("<br>replace 1 occurence()="+str.replace("a","#"));
+             
+             
+           /* var str="Hello!This is javascript.";
+            arr=str.split(" ");
+            document.write("<br>arr[0]="+arr[0]);
+            document.write("<br>arr[1]="+arr[1]);
+            console.log(arr);
+            */
+        </script>
+    </head>
+</html>

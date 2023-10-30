@@ -1,0 +1,43 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <input type="button" value="Click!!" onclick="fun()">
+        <img src="abc.img" onerror="{alert('img is not found')}">
+        <script>
+            window.onerror=function(message,url,line){
+                alert(message+""+url+""+line);
+            };
+
+            try{
+                var a=new Array(1,2,3,4);
+                //document.write(a);
+                //document.write(b);
+                throw new TypeError("B not found");
+                throw new SyntaxError("its syntax error");
+                document.write("after b");
+
+
+                
+            }
+
+            catch(e){
+                if(e instanceof SyntaxError){
+                    document.write(e.message);
+                }
+                else if(e instanceof ReferenceError){
+                    document.write(e.message);
+                }
+
+                else{
+                    alert(e.message);
+                }
+            }
+            finally{
+                document.write("finally block!!");
+            }
+
+    </script>
+    </body>
+</html>

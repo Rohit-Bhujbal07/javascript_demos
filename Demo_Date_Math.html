@@ -1,0 +1,26 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <script>
+            var today=new Date();
+            document.write("<br>Today="+today);
+            var tomorrow=new Date("11 Jan 2022");
+            document.write("<br>Tomorrow="+tomorrow);
+            document.write("<br>Timestamp of Today="+today.getTime());
+            var stamp=today.getTime();
+            document.write("<br>Time="+today.getDay()+"/"+today.getMonth()+"/"+today.getFullYear()+"/"+today.getHours()+"/"+today.getMinutes()+"/"+today.getSeconds());
+            document.write("<br>Round="+Math.round(2.56));
+            document.write("<br>Floor="+Math.floor(2.56));
+            document.write("<br>Ceil="+Math.ceil(2.56));
+            document.write("<br>Random="+Math.round(Math.random()));
+            var flag=false;
+            var b1=Boolean();
+            document.write("<br>Flag="+flag);
+            document.write("<br>b1="+b1);
+            document.write("<br>flag="+flag && b1);
+
+        </script>
+    </body>
+</html>

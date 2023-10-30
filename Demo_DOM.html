@@ -1,0 +1,53 @@
+<html>
+    <head>
+        <style>
+              .A{
+                background-color: lightgreen;
+                color: brown;
+              }
+        </style>
+    </head>
+    <body>
+        <p>This is p1</p>
+        <div id="d1">
+            <p>this is p2</p>
+            <p>this is p3</p>
+            <p>this is p4</p>
+
+        </div>
+        <p>this is p5</p>
+        <input type="button" value="click" onclick="fun()">
+        <script>
+            var d1=document.getElementById("d1");
+            function fun(){
+                var p2=d1.firstElementChild;
+                var p5=d1.nextElementSibling;
+                var p4=d1.lastElementChild;
+
+               // document.body.appendChild(p2);
+                //d1.appendChild(p2);
+                //document.body.insertBefore(p2,p5);
+                //d1.removeChild(p4);
+                //p4.parentNode.removeChild(p4);
+                //document.body.replaceChild(p2,p5);
+
+                //add the new element Dyanamically
+                var newDiv=document.createElement("div");
+                var txt=document.createTextNode("this is new div");
+                
+                newDiv.appendChild(txt);
+                newDiv.setAttribute("class","A");
+                document.body.appendChild(newDiv);
+                console.log(newDiv.getAttribute("class"));
+
+                var btn1=document.createElement("input");
+                btn1.setAttribute("type","button");
+                btn1.setAttribute("type","Newbtn");
+                
+
+                d1.appendChild(btn1);
+
+            }
+        </script>
+    </body>
+</html>

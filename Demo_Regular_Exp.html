@@ -1,0 +1,96 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <div id="d1"></div>
+        <script>
+          //case 1
+        /*
+          var str="World ellHo hello hello javascript";
+          var p1=/hello/g;
+          document.write(str.match(p1));
+
+          var p11=new RegExp("xyz","g");
+          var str1="xyz xyz";
+          document.write("<br>"+str1.match(p11));
+
+          */
+
+          //case 2
+         /*
+          p2=/^cat/;  //line start with cat
+          document.write("<br>"+p2.test('cat and mouse'));
+          document.write("<br>"+p2.test('the cat and mouse'));
+
+          p22=/cat/;
+          document.write("<br>"+p22.test('the cat and mouse'));
+         */
+         
+         //case 3
+        /*
+         var p3=/cat$/;
+         document.write("<br>"+p3.test('the mouse and the cat'));
+         document.write("<br>"+p3.test('the cat and mouse'));
+        */
+
+        //case 4
+       /*
+        var p4=/\bward/gi;
+
+        var text1='backward wardrobe ward';
+        document.write("<br>"+text1.match(p4));
+
+        var p44=/ward\b/gi;
+        var text2='backward Wardrobe ward';
+        document.write("<br>"+text2.match(p44));
+        
+        var p444=/\bward\b/gi;
+        var text3='backward Wardrobe Ward'
+        document.write("<br>"+text3.match(p444));
+
+      */
+       //case 5
+       /*
+        var p5=/ambi[ea]nce/;
+        document.write("<br>"+p5.test('ambiance'));
+        document.write("<br>"+p5.test('ambience'));
+
+       */
+
+       //case 6
+       /*
+       var p6=/[^bc]at/;
+       document.write("<br>"+p6.test('bat'));
+       document.write("<br>"+p6.test('cat'));
+       document.write("<br>"+p6.test('mat'));
+
+       */
+
+        //case 7
+       /*
+        p7=/hel*o/;
+        var p7=/hel+o/;//+
+
+        document.write("<br>"+p7.test('helo'));
+        document.write("<br>"+p7.test('hellllo'));
+        document.write("<br>"+p7.test('heo'));
+      */
+        //case 8
+       /*
+        var p8=/colou?r/;
+        document.write("<br>"+p8.test('color'));
+        document.write("<br>"+p8.test('colour'));
+       */
+
+       //case 9
+
+       var p9=/abc/i;
+       console.log(p9.exec('defabcdef'));
+       //ex
+
+       p=/^[https?]+:\/\/((w{3}.)?[\w+]+)\.[\w+]+$/i;
+
+        </script>
+    </body>
+</html>

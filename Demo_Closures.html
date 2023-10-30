@@ -1,0 +1,21 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <div id="d1"></div>
+        <script>
+            
+            function displayName(fname,lname){//Outer function
+                var str="My name is: ";
+                function makeFullName(){//Inner function
+                    return str+fname+" "+lname;
+                }
+                var name=makeFullName();//call the innerfunction
+                return name;
+
+            }
+            d1.innerHTML="<br>"+displayName("Sachin","Tendulkar");
+        </script>
+    </body>
+</html>

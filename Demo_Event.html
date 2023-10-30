@@ -1,0 +1,48 @@
+<html>
+    <head>
+      <script src="util.js"></script>  
+    </head>
+    <body>
+        <input type="button" value="AttachEvent" id="btn1">
+        <input type="button" value="RemoveEvent" id="btn2">
+
+        <script>
+            var btn1=document.getElementById("btn1");
+            var btn2=document.getElementById("btn2");
+
+            //DOM-LEVEL-0
+           /*
+            btn1.onclick=function(){
+                alert("Handler attached");
+            }
+            btn2.onclick=function(){
+                alert("Handler Removed");
+                btn1.onclick=null;
+            }
+         */
+            //DOM-LEVEL-2
+          /*
+            fuction fun1(){
+            alert("handler attached");
+           }
+           btn1.addEventListener("click",fun1,false);
+           btn2.addEventListener("click",function(){
+            btn1.removeEventListener("click",fun1,false);
+            alert("Handler removed");
+            
+             },false);
+         */
+          //cross Browser Utitlity
+          function fun1(){
+            alert("Attach Handler");
+          }
+          EventUtil.addHandler(btn1,"click",fun1);
+          EventUtil.addHandler(btn2,"click",function(){
+            alert("Remove Handler");
+            EventUtil.removeHandler(btn1,"click",fun1);
+
+          })
+        </script>
+    </body>
+    
+</html>

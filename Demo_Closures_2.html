@@ -1,0 +1,39 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <input type="button" value="click" onclick="fun1()">
+        <div id="d1"></div>
+       <script>
+         /* var d1=document.getElementById("d1");
+          function fun1(){
+            var x=fun();
+                d1.innerHTML=x;
+            }
+            var fun=(function(){
+                alert("outer");
+                var count=0;
+                return function(){
+                    alert("inner");
+                    count++;
+                    return count;
+                }
+            })();
+          */
+
+          function funOuter(fname,lname){
+            var str="Full name is: ";
+            function makeFullName(){
+                var x=10;
+                var name=str+""+fname+" "+lname;
+                return name;
+            }
+            return makeFullName();
+          }
+          var x=funOuter("Rohit","Bhujbal");
+          alert(x);
+
+       </script>
+    </body>
+</html>

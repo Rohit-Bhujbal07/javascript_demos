@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <style>
+
+        </style>
+    </head>
+    <body>
+        St=<input type="text" id="txtStart"><br>
+        End=<input type="text" id="txtEnd"><br>
+        <input type="button" value="Even" onclick="funEven()">
+        <input type="button" value="Odd" onclick="funOdd()">
+        <div id="d1"></div>
+        <script>
+            var d1=document.getElementById("d1");
+            function funEven(){
+                var st=document.getElementById("txtStart").value;
+                var end=document.getElementById("txtEnd").value;
+                for(var i=st;i<=end;i++){
+                    if(i%2==0){
+                       // ("<br>Even i="+i);
+                        d1.innerHTML += "<br>Even="+i;
+                    }
+                }
+            }
+            function funOdd(){
+                var st=document.getElementById("txtStart").value;
+                var end=document.getElementById("txtEnd").value;
+                for(var i=st;i<=end;i++){
+                    if(i%2==1){
+                    
+                        d1.innerHTML += "<br>Odd=" + i;
+                    }
+                }
+            }
+        </script>
+    </body>
+</html>

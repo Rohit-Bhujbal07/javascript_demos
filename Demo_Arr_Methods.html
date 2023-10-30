@@ -1,0 +1,62 @@
+<html>
+    <head>
+        <style>
+
+        </style>
+    </head>
+    <body>
+        <table id="tb1" border="1">
+            <tr>
+                <td>Index</td>
+                <td>Value</td>
+            </tr>
+        </table>
+
+    </body>
+    <script>
+        var arr= new Array();
+        var colors=['red','green','yellow','blue'];
+        var str="";
+        for(i=0;i<colors.length;i++){
+            str+="<tr><td>"+i+"</td><td>"+colors[i]+"</td></tr>"
+        }
+        document.getElementById("tb1").innerHTML+=str;
+
+        document.write("<br>length="+colors.length);
+        document.write("<br>toString()="+colors.toString());
+        document.write("<br>join()="+colors.join('-'));
+        document.write("<br>sort()="+colors.sort());
+        document.write("<br>reverse()="+colors.reverse());
+        document.write("<br>slice()="+colors.slice(1));
+        document.write("<br>slice()="+colors.slice(1,3));
+
+        //splice
+        var arr=colors.splice(1,0,"golden","silver","gray");
+        var arr=colors.splice(1,2);
+        var arr=colors.splice(1,2,"golden",100,200);
+        console.log("arr="+arr);
+        document.write("<br>splice()="+colors);
+
+        //stack methods
+        var products=['stationary','colors','pens'];
+        document.write("<br>org arr="+products);
+        var len=products.push('eraser');
+        console.log(len);
+        document.write("<br>push=="+products);
+        var x=products.pop();
+        console.log(x);
+        document.write("<br>pop()="+products);
+
+        //Queue Methods
+        var fruits=['apple','banana','mango'];
+        document.write("<br>org arr="+fruits);
+        var len=fruits.unshift('orange');
+        console.log(len);
+        document.write("<br>unshift="+fruits);
+         
+        var x=fruits.shift();
+        console.log(x);
+        document.write("<br>shift=="+fruits);
+
+    </script>
+</html>
